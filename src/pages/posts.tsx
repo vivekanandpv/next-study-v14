@@ -42,7 +42,7 @@ const Posts: React.FunctionComponent<PostsProps> = ({ posts }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const posts = await response.json();
 
